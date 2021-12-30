@@ -20,16 +20,25 @@ async function getMovies(data) {
     const result = await data;
     result.forEach(async (element) => {
         const { poster_path, title, vote_average } = await element;
-
         const movieEl = document.createElement("div");
         movieEl.classList.add("movie");
         movieEl.innerHTML = `
                 <img src="${IMGPATH + poster_path}" alt="${title}">
                 <div class="movie__info">
                 <h4>${title}</h4>
-                <span>${vote_average}</span>
+                <span class="${colorVote(vote_average)}">${vote_average}</span>
                 </div>
         `;
         main.appendChild(movieEl);
     });
+}
+
+function colorVote(vote_average) {
+    if (vote_average >= 8) {
+        return "green"
+    } else if (vote_average >= 6.5) {
+        return "orange"
+    } else {
+        return "red"
+    }
 }

@@ -139,3 +139,49 @@ footer .social__media {
     color: black;
     margin: 0.5rem;
 }
+
+@media screen and (max-width: 760px) {
+    #search {
+        width: 60%;
+    }
+}
+@media screen and (max-width: 550px) {
+    footer {
+        padding: 2rem 3rem;
+        margin-top: 3rem;
+    }
+    footer h2 {
+        font-family: inherit;
+        font-size: 2rem;
+        margin: 0 1.5rem;
+    }
+    footer .social__media {
+        font-size: 2.3rem;
+        margin: 0 1.3rem;
+    }
+    .social__media a {
+        text-decoration: none;
+        color: black;
+        margin: 0.4rem;
+    }
+}
+@media screen and (max-width: 450px) {
+    footer {
+        padding: 2rem 2rem;
+        margin-top: 3rem;
+    }
+    footer h2 {
+        font-family: inherit;
+        font-size: 1.6rem;
+        margin: 0 1.5rem;
+    }
+    footer .social__media {
+        font-size: 2rem;
+        margin: 0 1rem;
+    }
+    .social__media a {
+        text-decoration: none;
+        color: black;
+        margin: 0.3rem;
+    }
+}

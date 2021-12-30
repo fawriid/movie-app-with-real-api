@@ -1,0 +1,40 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html {
+    font-size: 62.5%;
+}
+body {
+    font-size: 1.6rem;
+    font-family: "Times New Roman", Times, serif;
+    background-color: #708ed2;
+}
+
+#main {
+    display: flex;
+    flex-wrap: wrap;
+}
+.movie {
+    width: 300px;
+    height: auto;
+    border-radius: 3px;
+    overflow: hidden;
+    background-color: #373b69;
+    box-shadow: 0 4px 5px 2px rgba(0, 0, 0, 0.4);
+    margin: 1rem;
+}
+.movie__info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #ebe5e2;
+    padding: 0.9rem 1.5rem 1.5rem;
+    gap: 1.5rem;
+    letter-spacing: 0.5px;
+}
+.movie img {
+    width: 100%;
+    border-radius: 3px;
+}

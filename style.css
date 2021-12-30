@@ -15,6 +15,8 @@ body {
 #main {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
 }
 .movie {
     width: 300px;
@@ -23,7 +25,7 @@ body {
     overflow: hidden;
     background-color: #373b69;
     box-shadow: 0 4px 5px 2px rgba(0, 0, 0, 0.4);
-    margin: 1rem;
+    margin: 2rem 4rem;
 }
 .movie__info {
     display: flex;

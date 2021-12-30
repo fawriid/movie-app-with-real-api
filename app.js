@@ -16,6 +16,7 @@ async function generateMovie() {
 }
 
 getMovies(generateMovie());
+
 async function getMovies(data) {
     const result = await data;
     result.forEach(async (element) => {
@@ -35,10 +36,31 @@ async function getMovies(data) {
 
 function colorVote(vote_average) {
     if (vote_average >= 8) {
-        return "green"
+        return "green";
     } else if (vote_average >= 6.5) {
-        return "orange"
+        return "orange";
     } else {
-        return "red"
+        return "red";
     }
 }
+
+const search = document.getElementById("search");
+
+const searchForm = document.getElementById("search__form");
+searchForm.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const searchTerm = search.value;
+
+    async function getMovieBySearch() {
+        const resp = await fetch(SEARCHAPI + searchTerm);
+        const respData = await resp.json();
+        const result = await respData.results;
+
+        console.log(result);
+        return result;
+    }
+
+    main.innerHTML = "";
+    getMovies(getMovieBySearch());
+    search.value = "";
+});

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
 * {
     box-sizing: border-box;
     margin: 0;
@@ -8,7 +9,7 @@ html {
 }
 body {
     font-size: 1.6rem;
-    font-family: "Times New Roman", Times, serif;
+    font-family: "Poppins", sans-serif;
     background-color: #708ed2;
 }
 
@@ -19,6 +20,7 @@ body {
     align-items: center;
 }
 .movie {
+    position: relative;
     width: 300px;
     min-height: 500px;
     border-radius: 7px;
@@ -26,6 +28,7 @@ body {
     background-color: #373b69;
     box-shadow: 0 4px 5px 2px rgba(0, 0, 0, 0.4);
     margin: 2rem 4rem;
+    cursor: pointer;
 }
 .movie__info {
     display: flex;
@@ -35,6 +38,27 @@ body {
     padding: 0.9rem 1.5rem 1.5rem;
     gap: 1.5rem;
     letter-spacing: 0.5px;
+}
+.movie__overview {
+    background-color: #fff;
+    color: black;
+    padding: 2rem 3rem;
+    font-size: 1.5rem;
+    position: absolute;
+    max-height: 100%;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    overflow: auto;
+    transform: translateY(101%);
+    transition: all 0.4s linear;
+    cursor: text;
+}
+.movie__overview h3 {
+    margin-bottom: 2rem;
+}
+.movie:hover .movie__overview {
+    transform: translateY(0);
 }
 .movie img {
     width: 100%;

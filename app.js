@@ -12,6 +12,7 @@ async function generateMovie() {
     );
     const respData = await resp.json();
     const result = respData.results;
+    console.log(result);
     return result;
 }
 
@@ -20,7 +21,7 @@ getMovies(generateMovie());
 async function getMovies(data) {
     const result = await data;
     result.forEach(async (element) => {
-        const { poster_path, title, vote_average } = await element;
+        const { poster_path, title, vote_average, overview } = await element;
         const movieEl = document.createElement("div");
         movieEl.classList.add("movie");
         movieEl.innerHTML = `
@@ -28,6 +29,9 @@ async function getMovies(data) {
                 <div class="movie__info">
                 <h4>${title}</h4>
                 <span class="${colorVote(vote_average)}">${vote_average}</span>
+                <div class="movie__overview">
+                <h3>Overview:</h3>
+                ${overview}</div>
                 </div>
         `;
         main.appendChild(movieEl);

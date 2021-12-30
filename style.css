@@ -114,3 +114,28 @@ header form {
     cursor: pointer;
     font-size: 2.5rem;
 }
+
+/* FOOTER */
+footer {
+    width: 100;
+    background-color: #ebe5e2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 5rem;
+    margin-top: 3rem;
+}
+footer h2 {
+    font-family: inherit;
+    font-size: 2.2rem;
+    margin: 0 1.5rem;
+}
+footer .social__media {
+    font-size: 2.5rem;
+    margin: 0 1.5rem;
+}
+.social__media a {
+    text-decoration: none;
+    color: black;
+    margin: 0.5rem;
+}

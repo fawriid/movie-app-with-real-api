@@ -20,6 +20,7 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
+    padding-bottom: 12rem;
 }
 .movie {
     position: relative;
@@ -119,13 +120,12 @@ header form {
 
 /* FOOTER */
 footer {
-    width: 100;
+    width: 100%;
     background-color: #ebe5e2;
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 2rem 5rem;
-    margin-top: 3rem;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -147,11 +147,26 @@ footer .social__media {
 }
 
 @media screen and (max-width: 760px) {
+    body {
+        font-size: 1.4rem;
+    }
     #search {
-        width: 60%;
+        width: 70%;
+    }
+    header {
+        padding: 2rem;
     }
 }
 @media screen and (max-width: 550px) {
+    body {
+        font-size: 1.3rem;
+    }
+    #search {
+        width: 75%;
+    }
+    header {
+        padding: 1.5rem;
+    }
     footer {
         padding: 2rem 3rem;
         margin-top: 3rem;
@@ -172,6 +187,15 @@ footer .social__media {
     }
 }
 @media screen and (max-width: 450px) {
+    body {
+        font-size: 1.5rem;
+    }
+    header {
+        padding: 1.3rem;
+    }
+    #search {
+        width: 75%;
+    }
     footer {
         padding: 2rem 2rem;
         margin-top: 3rem;
